@@ -60,6 +60,7 @@ public class Lavadora extends Electrodomestico {
 		return CARGA;
 	}
 	
+	
 	public static void precioFInal() {
 		
 	}
