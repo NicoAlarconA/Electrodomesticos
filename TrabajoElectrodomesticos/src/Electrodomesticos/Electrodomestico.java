@@ -2,22 +2,16 @@ package Electrodomesticos;
 
 public class Electrodomestico {
 
-	private int precioBase;
-	private String color;
-	private char consumoEnergetico;
-	private int peso;
+	protected int precioBase;
+	protected String color;
+	protected char consumoEnergetico;
+	protected int peso;
 	
-	private final String COLOR = "blanco";
-	private final char CONSUMO_ENERGETICO = 'F';
-	private final int PRECIO_BASE = 100000;
-	private final int PESO =5;
+	protected final String COLOR = "blanco";
+	protected final char CONSUMO_ENERGETICO = 'F';
+	protected final int PRECIO_BASE = 100000;
+	protected final int PESO =5;
 	
-	public enum color {
-		
-		blanco, negro, rojo, azul ,gris
-	
-	}
-
 	public Electrodomestico(int precioBase, String color, char consumoEnergetico, int peso) {
 		super();
 		this.precioBase = precioBase;
@@ -68,11 +62,27 @@ public class Electrodomestico {
 		return PESO;
 	}
 	
-	public static void comprobarConsumoEnergetico(){
-		
+	/**
+	 * @param consumoEnergetico
+	 * comprueba el consumo energetico del electrodomestico
+	 */
+	public void comprobarConsumoEnergetico(char consumoEnergetico){
+		if (consumoEnergetico>65 && consumoEnergetico<=70 ) {
+			this.consumoEnergetico=consumoEnergetico;
+		} else {
+			this.consumoEnergetico=CONSUMO_ENERGETICO;
+		}
 	}
 	
-	public static void comprobarColor() {
+	public void comprobarColor(String color) {
+		String colores[]= {"blanco", "negro", "rojo", "azul", "gris"};
+		boolean positivo=false;
+		
+		for (int i = 0; i < colores.length; i++) {
+			if (colores[i].equals(color)) {
+				positivo=true;
+			}
+		}
 		
 	}
 	
