@@ -19,9 +19,15 @@ public class Television extends Electrodomestico {
 	 * @param resolucion
 	 * @param sintonizadorTDT
 	 */
-	public Television(int precioBase, String color, char consumoEnergetico, int peso, int resolucion,
-			boolean sintonizadorTDT) {
-		super(precioBase, color, consumoEnergetico, peso);
+	//public Television(int precioBase, String color, char consumoEnergetico, int peso, int resolucion,
+	//		boolean sintonizadorTDT) {
+	//	super(precioBase, color, consumoEnergetico, peso);
+	//	this.resolucion = resolucion;
+	//	this.sintonizadorTDT = sintonizadorTDT;
+	//}
+	
+	public Television(int resolucion, boolean sintonizadorTDT) {
+		super();
 		this.resolucion = resolucion;
 		this.sintonizadorTDT = sintonizadorTDT;
 	}
@@ -30,7 +36,6 @@ public class Television extends Electrodomestico {
 	 */
 	public Television() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	/**
 	 * @param precioBase
@@ -46,10 +51,11 @@ public class Television extends Electrodomestico {
 	 * @param consumoEnergetico
 	 * @param peso
 	 */
-	public Television(int precioBase, String color, char consumoEnergetico, int peso) {
+	/*public Television(int precioBase, String color, char consumoEnergetico, int peso) {
 		super(precioBase, color, consumoEnergetico, peso);
 		// TODO Auto-generated constructor stub
-	}
+	}*/
+	
 	public int getResolucion1() {
 		return resolucion;
 	}
@@ -63,9 +69,17 @@ public class Television extends Electrodomestico {
 		return SINTONIZADORTDT;
 	}
 	
-	/*public static void precioFinal(){
+	public double precioFinal(){
+		double aumentoPrecio = super.precioFinal();
 		
-	}*/
+		if (resolucion > 40) {
+			aumentoPrecio = aumentoPrecio*0.03;
+				if (sintonizadorTDT = true) {
+					aumentoPrecio = aumentoPrecio + 50;
+				}
+		}
+		return aumentoPrecio;
+	}
 	
 	
 	

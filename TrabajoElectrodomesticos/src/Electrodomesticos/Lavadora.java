@@ -52,6 +52,10 @@ public class Lavadora extends Electrodomestico {
 		
 	}
 
+	public Lavadora(int precioBase, int i, char consumoEnergetico, String string, int carga2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getCarga() {
 		return carga;
 	}

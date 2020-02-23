@@ -30,6 +30,10 @@ public class Electrodomestico {
 		super();
 	}
 
+	public Electrodomestico(int precioBase2, int i, char consumoEnergetico2, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public int getPrecioBase() {
 		return precioBase;
 	}
