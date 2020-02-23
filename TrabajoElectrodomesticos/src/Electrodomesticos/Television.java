@@ -9,8 +9,8 @@ public class Television extends Electrodomestico {
 
 	int resolucion;
 	boolean sintonizadorTDT;
-	private static final int RESOLUCION = 20;
-	private static final boolean SINTONIZADORTDT= false;
+	private final int RESOLUCION = 20;
+	private final boolean SINTONIZADORTDT= false;
 	/**
 	 * @param precioBase
 	 * @param color
@@ -56,10 +56,10 @@ public class Television extends Electrodomestico {
 	public boolean isSintonizadorTDT() {
 		return sintonizadorTDT;
 	}
-	public static int getResolucion() {
+	public int getResolucion() {
 		return RESOLUCION;
 	}
-	public static boolean isSintonizadortdt() {
+	public boolean isSintonizadortdt() {
 		return SINTONIZADORTDT;
 	}
 	
