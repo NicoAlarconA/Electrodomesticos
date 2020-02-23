@@ -63,9 +63,9 @@ public class Television extends Electrodomestico {
 		return SINTONIZADORTDT;
 	}
 	
-	public static void precioFinal(){
+	/*public static void precioFinal(){
 		
-	}
+	}*/
 	
 	
 	

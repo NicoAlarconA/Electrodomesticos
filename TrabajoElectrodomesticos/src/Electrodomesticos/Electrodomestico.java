@@ -74,6 +74,10 @@ public class Electrodomestico {
 		}
 	}
 	
+	/**
+	 * @param color
+	 * comprueba el color del electrodomestico
+	 */
 	public void comprobarColor(String color) {
 		String colores[]= {"blanco", "negro", "rojo", "azul", "gris"};
 		boolean positivo=false;
@@ -86,8 +90,41 @@ public class Electrodomestico {
 		
 	}
 	
-	public static void precioFinal() {
+	public double precioFinal() {
+		double aumentoPeso = 0;
+			
+		if (peso >= 0 && peso <= 19){
+			aumentoPeso = aumentoPeso + 10;
+		}else if (peso >= 20 && peso <= 49){
+				aumentoPeso = aumentoPeso + 50;
+			}else if (peso >= 50 && peso <= 79){
+						aumentoPeso = aumentoPeso+ 80;
+					}else if (peso > 80){
+							aumentoPeso = aumentoPeso + 100;
+		}
 		
-	}
+		switch (consumoEnergetico) {
+		case 'a':
+			aumentoPeso = aumentoPeso + 100;
+			break;
+		case 'b':
+			aumentoPeso = aumentoPeso + 80;
+			break;
+		case 'c':
+			aumentoPeso = aumentoPeso + 60;
+			break;
+		case 'd':
+			aumentoPeso = aumentoPeso + 50;
+			break;
+		case 'e':
+			aumentoPeso = aumentoPeso + 30;
+			break;
+		case 'f':
+			aumentoPeso = aumentoPeso + 10;
+			break;
+		}
+		return aumentoPeso + precioBase;
+		}
+	
 	
 }
