@@ -18,7 +18,7 @@ public class MainEjecutable {
 		Electrodomestico listasElectro[] = new Electrodomestico[10];
 		listasElectro[0] = new Electrodomestico(200, "verde", 'a', 20);
 		listasElectro[1] = new Electrodomestico(100, "rojo", 'c', 50);
-		listasElectro[2] = new Television(500, "azul", 'f', 10, 42, true);
+		listasElectro[2] = new Television(500, "azul", 'f', 10, 42, false);
 		listasElectro[3] = new Lavadora();
 		listasElectro[4] = new Lavadora(200, "rojo", 'c', 20, 10);
 		listasElectro[5] = new Electrodomestico ();

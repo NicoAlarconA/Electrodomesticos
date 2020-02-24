@@ -62,7 +62,7 @@ public class Television extends Electrodomestico {
 		
 		if (this.resolucion > 40) {
 			aumentoPeso = aumentoPeso + precioBase *0.3;
-				if (this.sintonizadorTDT = true) {
+				if (this.sintonizadorTDT == true) {
 					aumentoPeso = aumentoPeso + 50;
 				}
 		}
