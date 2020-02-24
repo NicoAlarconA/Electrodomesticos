@@ -98,7 +98,7 @@ public class Electrodomestico {
 		}else if (peso >= 20 && peso <= 49){
 				aumentoPeso = aumentoPeso + 50;
 			}else if (peso >= 50 && peso <= 79){
-						aumentoPeso = aumentoPeso+ 80;
+						aumentoPeso = aumentoPeso + 80;
 					}else if (peso > 80){
 							aumentoPeso = aumentoPeso + 100;
 		}

@@ -64,6 +64,9 @@ public class Lavadora extends Electrodomestico {
 		return CARGA;
 	}
 	
+	public void setCarga(int carga) {
+		this.carga = carga;
+	}
 	
 	public double precioFinal() {
 		double aumentoPrecio = super.precioFinal();
@@ -74,9 +77,6 @@ public class Lavadora extends Electrodomestico {
 		return aumentoPrecio;
 	}
 
-	public void setCarga(int carga) {
-		this.carga = carga;
-	}
 	
 	
 }
