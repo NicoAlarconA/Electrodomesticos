@@ -19,42 +19,28 @@ public class Television extends Electrodomestico {
 	 * @param resolucion
 	 * @param sintonizadorTDT
 	 */
-	//public Television(int precioBase, String color, char consumoEnergetico, int peso, int resolucion,
-	//		boolean sintonizadorTDT) {
-	//	super(precioBase, color, consumoEnergetico, peso);
-	//	this.resolucion = resolucion;
-	//	this.sintonizadorTDT = sintonizadorTDT;
-	//}
+	public Television(int precioBase, String color, char consumoEnergetico, int peso, int resolucion,
+			boolean sintonizadorTDT) {
+		super(precioBase, color, consumoEnergetico, peso);
+		this.resolucion = resolucion;
+		this.sintonizadorTDT = sintonizadorTDT;
+	}
 	
 	public Television(int resolucion, boolean sintonizadorTDT) {
 		super();
 		this.resolucion = resolucion;
 		this.sintonizadorTDT = sintonizadorTDT;
 	}
-	/**
-	 * 
-	 */
+	
 	public Television() {
 		super();
 	}
-	/**
-	 * @param precioBase
-	 * @param peso
-	 */
+	
 	public Television(int precioBase, int peso) {
 		super(precioBase, peso);
 		// TODO Auto-generated constructor stub
 	}
-	/**
-	 * @param precioBase
-	 * @param color
-	 * @param consumoEnergetico
-	 * @param peso
-	 */
-	/*public Television(int precioBase, String color, char consumoEnergetico, int peso) {
-		super(precioBase, color, consumoEnergetico, peso);
-		// TODO Auto-generated constructor stub
-	}*/
+	
 	
 	public int getResolucion1() {
 		return resolucion;
