@@ -15,9 +15,8 @@ public class Electrodomestico {
 	public Electrodomestico(int precioBase, String color, char consumoEnergetico, int peso) {
 		super();
 		this.precioBase = precioBase;
-		this.color = color;
-		this.consumoEnergetico = consumoEnergetico;
-		this.peso = peso;
+		comprobarConsumoEnergetico(consumoEnergetico);
+		comprobarColor(color);;
 	}
 
 	public Electrodomestico(int precioBase, int peso) {
@@ -67,7 +66,7 @@ public class Electrodomestico {
 	 * comprueba el consumo energetico del electrodomestico
 	 */
 	public void comprobarConsumoEnergetico(char consumoEnergetico){
-		if (consumoEnergetico>65 && consumoEnergetico<=70 ) {
+		if (consumoEnergetico >= 65 && consumoEnergetico <= 70 ) {
 			this.consumoEnergetico=consumoEnergetico;
 		} else {
 			this.consumoEnergetico=CONSUMO_ENERGETICO;
@@ -78,16 +77,29 @@ public class Electrodomestico {
 	 * @param color
 	 * comprueba el color del electrodomestico
 	 */
+	
 	public void comprobarColor(String color) {
 		String colores[]= {"blanco", "negro", "rojo", "azul", "gris"};
 		boolean positivo=false;
 		
-		for (int i = 0; i < colores.length; i++) {
+		for (int i = 0; i < colores.length && !positivo; i++) {
 			if (colores[i].equals(color)) {
 				positivo=true;
 			}
 		}
-		
+		if (positivo) {
+			this.color=color;
+		}else {
+			this.color=COLOR;
+		}
+	}
+	
+	public void comprobacionConsumoEnergetico(char consumoEnergetico) {
+		if(consumoEnergetico>=65 && consumoEnergetico<=70) {
+			this.consumoEnergetico=consumoEnergetico;
+		}else {
+			this.consumoEnergetico=CONSUMO_ENERGETICO;
+		}
 	}
 	
 	public double precioFinal() {
@@ -102,7 +114,7 @@ public class Electrodomestico {
 					}else if (peso > 80){
 							aumentoPeso = aumentoPeso + 100;
 		}
-		
+		 
 		switch (consumoEnergetico) {
 		case 'a':
 			aumentoPeso = aumentoPeso + 100;

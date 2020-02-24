@@ -4,10 +4,6 @@ package Electrodomesticos;
  * @author nicolasrobertoalarconalallana
  *
  */
-/**
- * @author nicolasrobertoalarconalallana
- *
- */
 public class Lavadora extends Electrodomestico {
 
 	
@@ -38,9 +34,8 @@ public class Lavadora extends Electrodomestico {
 	 */
 	public Lavadora(int precioBase, int peso) {
 		super(precioBase, peso);
-		
 	}
-
+ 
 	/**
 	 * @param precioBase
 	 * @param color
@@ -49,11 +44,6 @@ public class Lavadora extends Electrodomestico {
 	 */
 	public Lavadora(int precioBase, String color, char consumoEnergetico, int peso) {
 		super(precioBase, color, consumoEnergetico, peso);
-		
-	}
-
-	public Lavadora(int precioBase, int i, char consumoEnergetico, String string, int carga2) {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getCarga() {
@@ -69,14 +59,11 @@ public class Lavadora extends Electrodomestico {
 	}
 	
 	public double precioFinal() {
-		double aumentoPrecio = super.precioFinal();
+		double aumentoPeso = super.precioFinal();
 		
 		if (carga > 80) {
-			aumentoPrecio = aumentoPrecio + 50;
+			aumentoPeso = aumentoPeso + 50;
 		} 
-		return aumentoPrecio;
+		return aumentoPeso;
 	}
-
-	
-	
 }

@@ -28,17 +28,18 @@ public class MainEjecutable {
 		listasElectro[9] = new Lavadora();
 		
 		double sumaElectro = 0, sumaLavadora =0, sumaTelevision = 0;
+		 
 		
 		for (int i = 0; i < listasElectro.length; i++) {
 			
 			if(listasElectro[i] instanceof Electrodomestico) {
-				sumaElectro = listasElectro[i].precioFinal();
+				sumaElectro = sumaElectro + listasElectro[i].precioFinal();
 			} 	
 			if(listasElectro[i] instanceof Lavadora) {
-				sumaLavadora = listasElectro[i].precioFinal();
+				sumaLavadora = sumaLavadora + listasElectro[i].precioFinal();
 			}
 			if(listasElectro[i] instanceof Television) {
-				sumaTelevision = listasElectro[i].precioFinal();
+				sumaTelevision = sumaTelevision + listasElectro[i].precioFinal();
 			}
 		}
 		

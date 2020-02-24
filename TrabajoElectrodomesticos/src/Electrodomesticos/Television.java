@@ -4,7 +4,7 @@ package Electrodomesticos;
  * @author nicolasrobertoalarconalallana
  *
  */
-
+ 
 public class Television extends Electrodomestico {
 
 	int resolucion;
@@ -40,8 +40,7 @@ public class Television extends Electrodomestico {
 		super(precioBase, peso);
 		// TODO Auto-generated constructor stub
 	}
-	
-	
+		
 	public int getResolucion1() {
 		return resolucion;
 	}
@@ -56,21 +55,14 @@ public class Television extends Electrodomestico {
 	}
 	
 	public double precioFinal(){
-		double aumentoPrecio = super.precioFinal();
+		double aumentoPeso = super.precioFinal();
 		
-		if (resolucion > 40) {
-			aumentoPrecio = aumentoPrecio*0.03;
-				if (sintonizadorTDT = true) {
-					aumentoPrecio = aumentoPrecio + 50;
+		if (this.resolucion > 40) {
+			aumentoPeso = aumentoPeso + precioBase *0.3;
+				if (this.sintonizadorTDT = true) {
+					aumentoPeso = aumentoPeso + 50;
 				}
 		}
-		return aumentoPrecio;
+		return aumentoPeso;
 	}
-	
-	
-	
-	
-		
-	
-	
 }
