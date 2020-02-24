@@ -2,7 +2,7 @@ package Electrodomesticos;
 
 /**
  * @author nicolasrobertoalarconalallana
- *
+ * Clase hija de padre Electrodomestico
  */
 public class Lavadora extends Electrodomestico {
 
@@ -57,6 +57,9 @@ public class Lavadora extends Electrodomestico {
 	public void setCarga(int carga) {
 		this.carga = carga;
 	}
+	/**
+	 * Metodo precioFinal, llama a metodo padre y aumenta el precio si la carga es mayor a 80
+	 */
 	
 	public double precioFinal() {
 		double aumentoPeso = super.precioFinal();

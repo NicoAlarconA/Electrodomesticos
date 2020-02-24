@@ -5,7 +5,7 @@ package Electrodomesticos;
 
 /**
  * @author nicolasrobertoalarconalallana
- *
+ *clase que ejecuta las ordenes
  */
 public class MainEjecutable {
 

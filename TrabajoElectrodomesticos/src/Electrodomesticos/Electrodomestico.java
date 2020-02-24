@@ -1,12 +1,24 @@
 package Electrodomesticos;
 
+/**
+ * @author Nicolas Alarcon Alallana
+ * Curso AwakeLab Full Stack Java
+ *
+ */
+
 public class Electrodomestico {
 
+	/**Atributos clase
+	 * 
+	 */
 	protected int precioBase;
 	protected String color;
 	protected char consumoEnergetico;
 	protected int peso;
 	
+	/**
+	 * Constantes
+	 */
 	protected final String COLOR = "blanco";
 	protected final char CONSUMO_ENERGETICO = 'F';
 	protected final int PRECIO_BASE = 100000;
@@ -94,6 +106,10 @@ public class Electrodomestico {
 		}
 	}
 	
+	/**
+	 * @param consumoEnergetico
+	 * comprueba que la letra es correcta, sino es correcta usara la letra por defecto.
+	 */
 	public void comprobacionConsumoEnergetico(char consumoEnergetico) {
 		if(consumoEnergetico>=65 && consumoEnergetico<=70) {
 			this.consumoEnergetico=consumoEnergetico;
@@ -102,6 +118,12 @@ public class Electrodomestico {
 		}
 	}
 	
+
+	
+	/**
+	 * calcula el precio final de los electrodomesticos
+	 * aumentando el precio de acuerdo al peso y por el consumo energetico
+	 */
 	public double precioFinal() {
 		double aumentoPeso = 0;
 			

@@ -2,7 +2,8 @@ package Electrodomesticos;
 
 /**
  * @author nicolasrobertoalarconalallana
- *
+ * Clase hija de padre Electrodomestico, contiene atributos y metodo de aumento de precio
+ * 
  */
  
 public class Television extends Electrodomestico {
@@ -38,7 +39,6 @@ public class Television extends Electrodomestico {
 	
 	public Television(int precioBase, int peso) {
 		super(precioBase, peso);
-		// TODO Auto-generated constructor stub
 	}
 		
 	public int getResolucion1() {
@@ -53,7 +53,10 @@ public class Television extends Electrodomestico {
 	public boolean isSintonizadortdt() {
 		return SINTONIZADORTDT;
 	}
-	
+	/**
+	 * Metodo precio final, llama a metodo padre y aumenta el precio si la television tiene Sintonizador 
+	 * y si la resolucion es mayo a 40
+	 */
 	public double precioFinal(){
 		double aumentoPeso = super.precioFinal();
 		
